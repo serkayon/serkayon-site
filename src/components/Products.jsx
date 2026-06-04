@@ -6,6 +6,7 @@ import Navbar from "../components/NavBar.jsx";
 // import ProductMiniNav from "../pages/ProductMiniNav.jsx";
 import download from "../assets/download.png";
 import watchdemo from "../assets/play.png";
+
 import usermanual from "../assets/user-manual.png";
 import DashboardAnnotator from "./DashboardAnnotator.jsx";
 import Ciidashboard from "../assets/cii-dashboard.png";
@@ -20,6 +21,16 @@ import po3 from "../assets/poultry3.png"
 import po4 from "../assets/poultry4.png"
 import po5 from "../assets/poultry5.png"
 import po6 from "../assets/poultry6.png"
+
+import e1 from "../assets/e1.png"
+import e2 from "../assets/e2.png"
+import e3 from "../assets/e3.png"
+
+import e5 from "../assets/e5.png"
+import e6 from "../assets/e6.png"
+import e7 from "../assets/e7.png"
+import e8 from "../assets/e8.png"
+import e9 from "../assets/e9.png"
 
 import {
   Brain,
@@ -39,6 +50,7 @@ import {
   AlertTriangle,
   CalendarClock,
   History,
+  BarChart3,
 } from "lucide-react";
 import machineTool from "../CaseStudy/CaseStudyAssests/hyundai-2.jpeg";
 import pm1 from "../CaseStudy/CaseStudyAssests/pm-5.png";
@@ -72,8 +84,8 @@ const productSeoData = {
   },
 
   "machine-monitoring": {
-    title: "Machine Tool-Guard - Serkayon Product",
-    subtitle: "Monitors tool diameter accuracy and machine health to predict wear, prevent defects, and maintain production quality"
+    title: "Energy Monitoring - Serkayon Product",
+    subtitle: "Monitors energy consumption and identifies optimization opportunities"
   },
 
   "column-integrity-guard": {
@@ -94,8 +106,8 @@ const productData = {
   "machine-monitoring": {
     title: "Energy Monitoring  ",
     subtitle:
-      "Monitors tool diameter accuracy and machine health to predict wear, prevent defects, and maintain production quality",
-    images: [machineTool],
+      "Monitors energy consumption in real time and identifies optimization opportunities for efficiency gains",
+    images: [e1,e2,e3,e9,e5,e6,e7,e8],
     features: [
       "Real-time Data Collection",
       "Multi-Machine Dashboard",
@@ -134,7 +146,7 @@ const productData = {
     title: "PoultryNet",
     subtitle:
       "Smart poultry farm monitoring and analytics platform for productivity and operational efficiency.",
-    images: [po5, po6],
+    images: [po1,po2,po3,po4,po5, po6],
     features: [
       "Real-Time  Monitoring",
       "Automated Data Collection",
@@ -149,37 +161,37 @@ const productData = {
 };
 // feature of mtg
 export const mtguardFeatures = [
-  {
-    title: "Real-Time Diameter Monitoring",
-    description: "Continuously verifies dimensional accuracy during machining.",
-    icon: Scan,
-  },
-  {
-    title: "Tool Wear Prediction",
-    description: "Identifies wear patterns before they lead to defects.",
-    icon: Zap,
-  },
-  {
-    title: "Machine Health Tracking",
-    description: "Detects abnormal load or performance variations.",
-    icon: Activity,
-  },
-  {
-    title: "Scrap Reduction Alerts",
-    description: "Prevents production errors through early anomaly detection.",
-    icon: AlertTriangle,
-  },
-  {
-    title: "Maintenance Scheduling Insights",
-    description: "Optimizes service timing based on performance trends.",
-    icon: CalendarClock,
-  },
-  {
-    title: "Machine Auditing Dashboard",
-    description:
-      "Creates a performance history for accountability and process optimization.",
-    icon: History,
-  },
+ {
+  title: "Real-Time Energy Monitoring",
+  description: "Tracks power consumption continuously across equipment and systems.",
+  icon: Activity,
+},
+{
+  title: "Energy Usage Analytics",
+  description: "Provides detailed insights into energy consumption patterns and trends.",
+  icon: BarChart3,
+},
+{
+  title: "Power Quality Monitoring",
+  description: "Detects voltage fluctuations, harmonics, and power disturbances.",
+  icon: Zap,
+},
+{
+  title: "Energy Waste Alerts",
+  description: "Identifies abnormal consumption and notifies users instantly.",
+  icon: AlertTriangle,
+},
+{
+  title: "Predictive Maintenance Insights",
+  description: "Analyzes equipment performance to prevent energy-related failures.",
+  icon: CalendarClock,
+},
+{
+  title: "Centralized Energy Dashboard",
+  description:
+    "Offers a comprehensive view of energy performance, efficiency, and cost savings.",
+  icon: Gauge,
+},
 ];
 // featuresData.js
 export const cigFeatures = [
@@ -303,7 +315,7 @@ const featureMapping = {
 // import { useNavigate, useParams } from "react-router-dom"
 
 const tabs = [
-  { id: "machine-monitoring", label: "MTG" },
+  { id: "machine-monitoring", label: "EM" },
   { id: "predictive-maintenance", label: "Bio-PM" },
   { id: "column-integrity-guard", label: "Bio-CIG" },
   { id: "poultrynet", label: "PoultryNet" }

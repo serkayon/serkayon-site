@@ -77,7 +77,7 @@ return(
       to="/product/machine-monitoring"
       className="block px-5 py-3 hover:bg-slate-50 text-[#1F2A44]"
     >
-      Machine Tool Guard (MTG)
+      Energy Monitoring System
     </Link>
     <Link
       to="/product/poultrynet"
@@ -217,7 +217,7 @@ onClick={()=>setOpen(!open)}
               transition-all duration-300
             "
           >
-            Machine Tool Guard
+            Energy Monitoring System
           </Link>
    <Link
             to="/product/poultry"

@@ -14,9 +14,9 @@ const products = [
     pdf: null,
   },
   {
-    name: "MTG",
+    name: "EMS",
     description:
-      "Machine-Tool Guard for operational safety and anomaly detection.",
+      "Monitors energy consumption and identifies optimization opportunities.",
     pdf: null,
   },
     {
