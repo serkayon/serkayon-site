@@ -1,5 +1,4 @@
-import { FaLinkedinIn, FaYoutube, FaEnvelope } from "react-icons/fa";
-
+import { FaLinkedinIn, FaYoutube, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-[#191F2F] border-t border-[#2a3247] text-white">
@@ -71,10 +70,21 @@ Machine Tool-Guard            </li>
           </p>
 
           {/* ADDRESS */}
-          <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-            18, Thippiran Thotti Street, <br />
-            Trichy - Tamil Nadu, 620008
-          </p>
+
+<a
+  href="https://maps.app.goo.gl/48qVT133HESet8SG6?g_st=ipc"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-start gap-3 text-gray-400 text-sm mb-4 leading-relaxed hover:text-[#FB2C36] transition"
+>
+  <FaMapMarkerAlt className="mt-1 text-[#FB2C36] flex-shrink-0" />
+
+  <span>
+    18, Thippiran Thotti Street,
+    <br />
+    Trichy - Tamil Nadu, 620008
+  </span>
+</a>
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-4">

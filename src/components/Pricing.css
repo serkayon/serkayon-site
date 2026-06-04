@@ -1,0 +1,538 @@
+/* ---------- BASE ---------- */
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #0f1923;
+}
+
+/* ---------- BACKGROUND GRID (matches hero grid pattern) ---------- */
+.pricing-wrapper {
+  min-height: 100vh;
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(180, 190, 205, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 190, 205, 0.35) 1px, transparent 1px),
+    #f5f6f8;
+  background-size: 48px 48px;
+  position: relative;
+}
+
+/* Subtle radial highlight in center */
+.pricing-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 20%,
+    rgba(225, 235, 248, 0.6),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pricing-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- HEADER ---------- */
+.pricing-title {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+  color: #0f1923;
+
+}
+
+.pricing-subtitle {
+  color: #5a6473;
+  font-size: clamp(14px, 1.2vw, 18px);
+  margin-bottom: 70px;
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+.pricing-wrapper h2 {
+  color: #1a2535;
+}
+
+/* ---------- CARDS ---------- */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.pricing-card {
+  position: relative;
+  width: 320px;
+  padding: 34px 30px 96px;
+  border-radius: 18px;
+  background: #ffffff;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(15, 25, 35, 0.1);
+  text-align: left;
+  box-shadow: 0 2px 16px rgba(15, 25, 35, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 8px 32px rgba(15, 25, 35, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Trial card */
+.pricing-card.trial {
+  background: #fafbfc;
+  border-color: rgba(15, 25, 35, 0.08);
+}
+
+/* Center / premium card */
+.pricing-card.premium {
+  background: #ffffff;
+  border-color: rgba(15, 25, 35, 0.14);
+  transform: translateY(-10px);
+  box-shadow: 0 4px 28px rgba(15, 25, 35, 0.12);
+}
+
+.pricing-card.premium:hover {
+  transform: translateY(-13px);
+  box-shadow: 0 12px 40px rgba(15, 25, 35, 0.16);
+}
+
+/* ---------- BADGE / OFFER ---------- */
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(15, 25, 35, 0.07);
+  color: #3a4755;
+}
+
+.offer {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(220, 38, 38, 0.1);
+  color: #c0392b;
+}
+
+/* ---------- TEXT ---------- */
+.pricing-card h3 {
+  font-size: clamp(18px, 1.6vw, 22px);
+  margin-bottom: 10px;
+  color: #0f1923;
+}
+
+.price {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #0f1923;
+}
+
+.price span {
+  font-size: clamp(12px, 1vw, 14px);
+  color: #8a95a0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card ul li {
+  font-size: clamp(13px, 1.1vw, 15px);
+  margin: 10px 0;
+  color: #374555;
+}
+
+/* Cross items dimmed */
+.pricing-card ul li:has(> *:first-child) {
+  color: #374555;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  right: 26px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 25, 35, 0.18);
+  background: #ffffff;
+  color: #0f1923;
+  font-size: clamp(13px, 1.1vw, 15px);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: #f0f4f8;
+  border-color: rgba(15, 25, 35, 0.28);
+}
+
+/* ---------- YEARLY BUTTON SHIMMER ---------- */
+.yearly-btn {
+  overflow: hidden;
+  background: #0f1923;
+  color: #fff;
+  border: none;
+}
+
+.yearly-btn:hover {
+  background: #1e2d3d;
+  color: #fff;
+}
+
+.yearly-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 3.5s infinite;
+}
+
+/* ---------- CONTACT BOX ---------- */
+.contact-box {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  right: 26px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f2f5f9;
+  border: 1px solid rgba(15, 25, 35, 0.1);
+  font-size: 13px;
+  color: #5a6473;
+  text-align: center;
+  line-height: 1.5;
+}
+.contact-box {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  right: 26px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f2f5f9;
+  border: 1px solid rgba(15, 25, 35, 0.1);
+  font-size: 13px;
+  color: #5a6473;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .contact-box {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-box {
+    position: relative; /* Prevent overflow issues */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    box-sizing: border-box;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .contact-box {
+    padding: 10px;
+    font-size: 11px;
+    border-radius: 8px;
+  }
+}
+
+.contact-glow {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #e02020;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: color 0.15s;
+}
+
+.contact-glow:hover {
+  color: #b91c1c;
+  text-decoration: underline;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes shimmer {
+  100% { left: 120%; }
+}
+
+/* ---------- SUPER SALE RIBBON ---------- */
+.super-sale {
+  position: absolute;
+  top: 18px;
+  right: -8px;
+  background: linear-gradient(90deg, #e02020, #b91c1c);
+  color: #fff;
+  padding: 10px 22px 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+}
+
+.super-sale::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 14px solid #b91c1c;
+}
+
+.super-sale::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+/* ================= YEARLY BADGE + RIBBON ================= */
+
+/* Ribbon behind circle */
+.yearly-ribbon {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 40px;
+  background: linear-gradient(90deg, #e02020, #c0392b, #e02020);
+  z-index: 1;
+  clip-path: polygon(
+    0% 0%,
+    95% 0%,
+    90% 50%,
+    95% 100%,
+    0% 100%,
+    5% 50%
+  );
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.25);
+}
+
+/* Circle badge */
+.yearly-badge {
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e02020, #c0392b);
+  border: 3px dashed #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.35);
+  overflow: hidden;
+}
+
+/* Badge text */
+.yearly-badge span {
+  font-size: 13px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+/* Badge shimmer */
+.yearly-badge::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -120%;
+  width: 60%;
+  height: 140%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: badgeShimmer 3s infinite;
+}
+
+@keyframes badgeShimmer {
+  100% { left: 120%; }
+}
+
+/* ---------- AQUA BOW (now uses red accent) ---------- */
+.aqua-bow {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #e02020, #c0392b, #e02020);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 52px;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
+  overflow: hidden;
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% 70%, 94% 50%, 100% 100%,
+    0% 100%, 6% 50%, 0% 90%
+  );
+}
+
+.aqua-bow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  animation: bowShimmer 3s infinite;
+}
+
+@keyframes bowShimmer {
+  100% { left: 120%; }
+}
+
+/* ---------- CURVED RIBBON (red theme) ---------- */
+.curved-ribbon {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 46px;
+  background: linear-gradient(90deg, #e02020, #c0392b, #e02020);
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.curved-ribbon span {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.curved-ribbon::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  bottom: 0;
+  width: 0; height: 0;
+  border-top: 23px solid #c0392b;
+  border-bottom: 23px solid transparent;
+  border-right: 26px solid #c0392b;
+}
+
+.curved-ribbon::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  bottom: 0;
+  width: 0; height: 0;
+  border-top: 23px solid #c0392b;
+  border-bottom: 23px solid transparent;
+  border-left: 26px solid #c0392b;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+  .card-container {
+    gap: 2rem;
+  }
+  .pricing-card {
+    width: 290px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+  }
+  .pricing-card {
+    width: 100%;
+    max-width: 380px;
+  }
+  .pricing-card.premium {
+    transform: none;
+    order: -1;
+  }
+  .pricing-card.premium:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-wrapper {
+    padding: 70px 16px;
+  }
+  .pricing-card {
+    max-width: 100%;
+    padding: 30px 22px 90px;
+  }
+}

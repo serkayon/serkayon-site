@@ -1,0 +1,176 @@
+import "./Pricing.css";
+import { useNavigate } from "react-router-dom";
+import Navbar from "./NavBar";
+import { Helmet } from "react-helmet-async";
+
+export default function Pricing() {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <Helmet>
+        <title>Pricing - View flexible pricing options for Serkayon's Product</title>
+        <meta
+          name="description"
+          content="Explore Affordable Pricing options for Serkayon Products"
+        />
+      </Helmet>
+
+  
+
+      <div className="pricing-wrapper">
+        <h1 className="pricing-title">Pricing and Planning</h1>
+
+        {/* ===== Bio-PM Section ===== */}
+        <h2 className="text-3xl md:text-5xl mb-20 mt-10 font-mono">
+          Bio-PM (Predictive Maintenance)
+        </h2>
+
+        <div className="card-container">
+
+          {/* Trial */}
+          <div className="pricing-card trial">
+            <h3>7 Days Trial</h3>
+            <p className="price">$0</p>
+            <ul>
+              <li>✓ Limited access</li>
+              <li>✕ No credit card required</li>
+              <li>✕ Secure &amp; encrypted</li>
+              <li>✕ Fast performance</li>
+              <li>✕ Email support</li>
+              <li>✕ Regular updates</li>
+              <li>✕ Easy onboarding</li>
+            </ul>
+          </div>
+
+          {/* Yearly — Premium */}
+          <div className="pricing-card yearly premium">
+            <div className="yearly-ribbon" />
+            <div className="yearly-badge">
+              <span>
+                OFFER
+                <br />
+                16%
+              </span>
+            </div>
+
+            <h3>Yearly</h3>
+            <p className="price">
+              $13.99 <span>/month</span>
+            </p>
+            <ul>
+              <li>✓ Best value plan</li>
+              <li>✓ Premium support</li>
+              <li>✓ Lifetime updates</li>
+              <li>✓ Maximum savings</li>
+              <li>✓ High security</li>
+              <li>✓ Unlimited access</li>
+            </ul>
+
+            <div className="contact-box">
+              For multiple machines in one dashboard
+              <span
+                className="contact-glow"
+                onClick={() => navigate("/contact")}
+              >
+                Contact Us
+              </span>
+            </div>
+          </div>
+
+          {/* Monthly */}
+          <div className="pricing-card monthly">
+            <h3>Monthly</h3>
+            <p className="price">
+              $16.99 <span>/month</span>
+            </p>
+            <ul>
+              <li>✕ Unlimited access</li>
+              <li>✓ Priority support</li>
+              <li>✕ Maximum savings</li>
+              <li>✓ Faster updates</li>
+              <li>✓ Performance boost</li>
+              <li>✓ Trusted by users</li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* ===== Bio-CIG Section ===== */}
+        <h2 className="text-3xl md:text-5xl mb-20 mt-10 font-mono">
+          Bio-CIG (Column Integrity Guard)
+        </h2>
+
+        <div className="card-container">
+
+          {/* Trial */}
+          <div className="pricing-card trial">
+            <h3>7 Days Trial</h3>
+            <p className="price">$0</p>
+            <ul>
+              <li>✓ Limited access</li>
+              <li>✕ No credit card required</li>
+              <li>✕ Secure &amp; encrypted</li>
+              <li>✕ Fast performance</li>
+              <li>✕ Email support</li>
+              <li>✕ Regular updates</li>
+              <li>✕ Easy onboarding</li>
+            </ul>
+          </div>
+
+          {/* Yearly — Premium */}
+          <div className="pricing-card yearly premium">
+            <div className="yearly-ribbon" />
+            <div className="yearly-badge">
+              <span>
+                OFFER
+                <br />
+                20%
+              </span>
+            </div>
+
+            <h3>Yearly</h3>
+            <p className="price">
+              $119.99 <span>/month</span>
+            </p>
+            <ul>
+              <li>✓ Best value plan</li>
+              <li>✓ Premium support</li>
+              <li>✓ Lifetime updates</li>
+              <li>✓ Maximum savings</li>
+              <li>✓ High security</li>
+              <li>✓ Unlimited access</li>
+            </ul>
+
+            <div className="contact-box">
+              For multiple machines in one dashboard
+              <span
+                className="contact-glow"
+                onClick={() => navigate("/contact")}
+              >
+                Contact Us
+              </span>
+            </div>
+          </div>
+
+          {/* Monthly */}
+          <div className="pricing-card monthly">
+            <h3>Monthly</h3>
+            <p className="price">
+              $149.99 <span>/month</span>
+            </p>
+            <ul>
+              <li>✕ Unlimited access</li>
+              <li>✓ Priority support</li>
+              <li>✕ Maximum savings</li>
+              <li>✓ Faster updates</li>
+              <li>✓ Performance boost</li>
+              <li>✓ Trusted by users</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </>
+  );
+}

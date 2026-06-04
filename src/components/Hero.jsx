@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import heroImg from "../assets/3d model.png"
+import WhoWeAre from "./WhoWeAre";
 
 export default function Hero(){
 
@@ -30,10 +31,7 @@ predictive maintenance, analytics and automation.
 </p>
 
 
-<a href="#industries"><button className="mt-8 px-8 py-3 bg-red-500 text-white rounded-full hover:scale-105 transition">
-Explore Case Studies 
 
-</button></a>
 
 </motion.div>
 
@@ -60,8 +58,13 @@ Explore Case Studies
 </div>
 
 </div>
+{/* Who We Are Section */}
+<div className="mt-24">
+  <WhoWeAre />
+</div>
 
 </section>
+
 
 )
 }
