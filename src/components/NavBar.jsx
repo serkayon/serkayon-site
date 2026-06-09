@@ -101,7 +101,11 @@ return(
     </Link>
   </div>
 </li>
-<li><a href="/services" className="nav-link">Services</a></li>
+{/* <li><a href="/services" className="nav-link">Services</a></li> */}
+
+<li>
+  <Link to="/services" className="nav-link">Services</Link>
+</li>
 {/* <li><a href="/clients" className="nav-link">Clients</a></li> */}
 <li>
   <Link
@@ -110,7 +114,11 @@ return(
   >
   Plans & Pricing</Link>
 </li>
-<li><a href="/contact" className="nav-link">Contact Us</a></li>
+
+<li>
+  <Link to="/contact" className="nav-link">Contact Us</Link>
+</li>
+{/* <li><a href="/contact" className="nav-link">Contact Us</a></li> */}
 
 
 </ul>

@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./components/NavBar"
 import Hero from "./components/Hero"
 import Services from "./components/Services"
-
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import Products from "./components/Products"
@@ -86,7 +85,6 @@ return(
 
 
         <Route path="/services" element={<Services />} />
-   
         <Route path="/contact" element={<Contact />} />
            <Route path="/footer" element={<Footer />} />
         <Route path="/pricing" element={<Pricing />} />
